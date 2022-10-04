@@ -1,0 +1,93 @@
+.info {
+  padding: 20px;
+  padding-bottom: 18px;
+  text-align: left;
+
+  @media (min-width: @vTabletWidth) {
+    padding: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 22px;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    padding-top: 8px;
+    width: 318px;
+    margin-right: 0;
+
+    &--shop {
+      margin-right: 28px;
+    }
+  }
+}
+
+.info__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.02em;
+  color: @colorBasePrimary;
+  margin-bottom: 12px;
+}
+
+.info__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.info__link {
+  .link;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+
+  &:hover,
+  &:focus {
+    color: @colorPrimaryLighter;
+  }
+
+  &:active {
+    color: @colorPrimaryDarker;
+  }
+}
+
+.info__item {
+  margin-bottom: 4px;
+}
+
+.info__img {
+  fill: @colorBasePrimary;
+  margin-right: 6px;
+}
+
+.info--address .info__link {
+  font-size: 14px;
+  line-height: 1.43;
+  text-transform: none;
+  font-weight: 400;
+}
+
+.info--address .info__item {
+  margin: 0;
+}
+
+.info--address {
+  padding-bottom: 11px;
+
+  @media (min-width: @vDesktopWidth) {
+    margin-left: auto;
+    margin-right: 19px;
+  }
+}
+
+.info--address .info__img {
+  flex: 0 0 13px;
+}

@@ -1,0 +1,40 @@
+.copyright {
+  color: @colorBaseGrey;
+  display: flex;
+  justify-content: center;
+  padding: 20px 20px 30px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+
+  @media (min-width: @vTabletWidth) {
+    width: 100%;
+    padding-top: 27px;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    width: 100%;
+    padding-top: 18px;
+  }
+}
+
+.copyright__logo {
+  fill: currentColor;
+  margin-left: 4px;
+}
+
+.copyright__link {
+  .link;
+  color: @colorBaseGrey;
+  display: flex;
+  align-items: center;
+}
+
+.copyright__link:hover,
+.copyright__link:focus {
+  color: @colorBasePrimary;
+}
+
+.copyright__link:active {
+  color: @colorPrimaryDarker;
+}

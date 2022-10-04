@@ -1,0 +1,59 @@
+.nojs .navigation {
+  display: block;
+  position: static;
+  order: 3;
+
+  @media (min-width: @vTabletWidth) {
+    order: 0;
+  }
+}
+
+.nojs .header__wrapper {
+  flex-direction: column;
+
+  @media (min-width: @vTabletWidth) {
+    flex-direction: row;
+  }
+}
+
+.nojs .header__toggle-wrapper {
+  display: none;
+}
+
+.nojs .header__logo {
+  margin: 0 auto;
+}
+
+.nojs .header__list {
+  padding-bottom: 10px;
+}
+
+.nojs .address__map {
+  background: @colorBackGrey url("../../img/map_mobile.jpg") no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background: @colorBackGrey url("../../img/map_mobile@2.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: @vTabletWidth) {
+    background: @colorBackGrey url("../../img/map-tablet.jpg") no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: @colorBackGrey url("../../img/map-tablet@2.jpg") no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    background: @colorBackGrey url("../../img/map-desktop.jpg") no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: @colorBackGrey url("../../img/map-desktop@2.jpg") no-repeat;
+      background-size: cover;
+    }
+  }
+}

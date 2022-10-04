@@ -1,0 +1,81 @@
+.switch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.switch__item {
+  margin-top: 21px;
+
+  @media (min-width: @vTabletWidth) {
+    margin-top: 20px;
+  }
+}
+
+.switch__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.switch__input {
+  width: 42px;
+  background-color: @colorBackGrey;
+}
+
+.switch__slider {
+  width: 42px;
+  height: 24px;
+  background-color: @colorBaseGrey;
+  border-radius: 12px;
+  margin-right: 12px;
+  cursor: pointer;
+  position: relative;
+  transition: backgroundcolor 2s;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.switch__label {
+  display: flex;
+}
+
+.switch__slider::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: @colorBaseWhite;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: 0.01s;
+}
+
+.switch__input:checked + .switch__slider {
+  background-color: @colorBasePrimary;
+}
+
+.switch__input:checked + .switch__slider::before {
+  transform: translateX(17px);
+}
+
+.switch__input:disabled + .switch__slider {
+  background-color: @colorLightGrey;
+}
+
+.switch__input:disabled ~ .switch__text {
+  color: @colorBaseGrey;
+}
+
+.switch__label:hover .switch__slider {
+  background-color: fade(@colorBasePrimary, 25%);
+  outline: 2px solid @colorBasePrimary;
+}
+
+.switch__label:focus-within .switch__slider {
+  background-color: @colorLavender;
+  outline: 2px solid @colorBasePrimary;
+}

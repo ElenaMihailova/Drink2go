@@ -1,0 +1,39 @@
+.logo {
+  display: flex;
+}
+
+.logo__text {
+  display: none;
+
+  @media (min-width: @vDesktopWidth) {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.logo__link {
+  .link;
+
+  @media (min-width: @vDesktopWidth) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.logo__img {
+  @media (min-width: @vTabletWidth) {
+    width: 82px;
+    height: 36px;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    width: 170px;
+    height: 36px;
+    margin-right: 20px;
+    padding-top: 3px;
+  }
+}

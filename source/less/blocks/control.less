@@ -1,0 +1,90 @@
+.control {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @vTabletWidth) {
+    padding-left: 1px;
+  }
+}
+
+.control__item {
+  margin-top: 22px;
+
+  @media (min-width: @vTabletWidth) {
+    margin-top: 20px;
+  }
+}
+
+.control__label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.control__button {
+  flex: 0 0 24px;
+  height: 24px;
+  border: 2px solid @colorBaseGrey;
+  margin-right: 10px;
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+}
+
+.control__button::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: @colorBasePrimary;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.control__input:checked + .control__button {
+  border: 2px solid @colorBasePrimary;
+}
+
+.control__input:checked + .control__button::before {
+  display: block;
+}
+
+.control__input:disabled ~ .control__text {
+  color: @colorBaseGrey;
+}
+
+.control__input:disabled + .control__button {
+  border: 2px solid @colorLightGrey;
+}
+
+.control__label:hover .control__button {
+  background-color: fade(@colorBasePrimary, 25%);
+  outline: 2px solid @colorBaseWhite;
+  outline-offset: -4px;
+}
+
+.control__label:focus .control__button {
+  background-color: fade(@colorBasePrimary, 25%);
+  outline: 2px solid @colorBaseWhite;
+  outline-offset: -4px;
+}
+
+.control__label:focus-within .control__button {
+  background-color: fade(@colorBasePrimary, 25%);
+  outline: 2px solid @colorBaseWhite;
+  outline-offset: -4px;
+}
+
+.control__label:active .control__button::before {
+  background-color: rgba(51, 51, 51, 0.3);
+}
+
+.control__text {
+  text-align: left;
+}

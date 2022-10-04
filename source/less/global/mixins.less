@@ -1,0 +1,41 @@
+.button {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  border: none;
+  background-color: @colorBasePrimary;
+  padding: 16px;
+  color: @colorBaseWhite;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: @colorPrimaryLighter;
+  }
+
+  &:active {
+    background-color: @colorPrimaryDarker;
+  }
+
+  &:disabled {
+    background-color: @colorBaseGrey;
+  }
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  color: @colorBaseBlack;
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: @colorBasePrimary;
+  margin: 0;
+}

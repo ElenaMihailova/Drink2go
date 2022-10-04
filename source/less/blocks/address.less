@@ -1,0 +1,21 @@
+.address {
+  background-color: @colorBackGrey;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: auto;
+}
+
+.address__map {
+  display: block;
+  border: none;
+  width: 100%;
+  min-height: 420px;
+
+  @media (min-width: @vTabletWidth) {
+    min-height: 480px;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    min-height: 540px;
+  }
+}

@@ -1,0 +1,142 @@
+.swiper {
+  position: relative;
+}
+
+.swiper__button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  margin: 0;
+
+  &--next {
+    right: 0;
+    left: auto;
+  }
+
+  @media (min-width: @vTabletWidth) {
+    width: 80px;
+  }
+}
+
+.swiper-button-prev,
+.swiper__button--next {
+  color: @colorBasePrimary;
+}
+
+.swiper-button-prev::after,
+.swiper__button--next::after {
+  font-size: 20px;
+
+  @media (min-width: @vTabletWidth) {
+    position: absolute;
+    top: 36%;
+    left: 35px;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    top: 49%;
+  }
+}
+
+.swiper__button--next::after {
+  @media (min-width: @vTabletWidth) {
+    left: auto;
+    right: 35px;
+  }
+}
+
+.swiper-pagination {
+  display: none;
+
+  @media (min-width: @vDesktopWidth) {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    gap: 4px;
+    bottom: 60px;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 62px;
+  height: 4px;
+  background-color: @colorBaseWhite;
+  border-radius: 0;
+  display: block;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: @colorBasePrimary;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 68px;
+}
+
+.swiper-pagination-bullet:hover {
+  background-color: fade(@colorBasePrimary, 25%);
+}
+
+.swiper-pagination-bullet:active {
+  background-color: @colorBasePrimary;
+}
+
+.swiper-button-prev:hover {
+  background: linear-gradient(
+    90deg,
+    @colorBaseWhite 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.swiper-button-next:hover {
+  background: linear-gradient(
+    270deg,
+    @colorBaseWhite 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.swiper-button-prev:focus {
+  background: linear-gradient(
+    90deg,
+    @colorBaseWhite 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.swiper-button-next:focus {
+  background: linear-gradient(
+    270deg,
+    @colorBaseWhite 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.swiper-button-prev:active {
+  background: linear-gradient(
+    90deg,
+    rgba(120, 89, 207, 0.25) 0%,
+    rgba(120, 89, 207, 0) 100%
+  );
+}
+
+.swiper-button-next:active {
+  background: linear-gradient(
+    270deg,
+    rgba(120, 89, 207, 0.25) 0%,
+    rgba(120, 89, 207, 0) 100%
+  );
+}

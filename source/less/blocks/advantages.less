@@ -1,0 +1,133 @@
+.advantages {
+  background-color: @colorBaseWhite;
+  padding: 50px 20px 60px;
+
+  @media (min-width: @vTabletWidth) {
+    padding: 21px 30px 100px;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+}
+
+.advantages__subtitle {
+  .subtitle;
+  margin-bottom: 4px;
+
+  @media (min-width: @vDesktopWidth) {
+    margin-bottom: 5px;
+  }
+}
+
+.advantages__title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.5;
+
+  @media (min-width: @vTabletWidth) {
+    font-size: 42px;
+    line-height: 1.52;
+    margin-bottom: 59px;
+  }
+}
+
+.advantages__list {
+  margin: 0;
+  padding-top: 4px;
+
+  @media (min-width: @vTabletWidth) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 50px;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 19px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.advantages__text {
+  margin: 0;
+
+  @media (min-width: @vTabletWidth) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.advantages__wrap {
+  margin-top: 32px;
+  position: relative;
+  padding-top: 66px;
+
+  @media (min-width: @vTabletWidth) {
+    margin: 0 auto;
+    padding-left: 72px;
+    padding-top: 0;
+    text-align: left;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    text-align: center;
+    padding-top: 80px;
+  }
+}
+
+.advantages__name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.78;
+  margin-bottom: 4px;
+
+  @media (min-width: @vTabletWidth) {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+}
+
+.advantages__wrap::before {
+  content: "";
+  width: 52px;
+  height: 56px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-repeat: no-repeat;
+
+  @media (min-width: @vTabletWidth) {
+    left: 26px;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    left: 50%;
+    top: 0;
+  }
+}
+
+.advantages__wrap--speed::before {
+  background-image: url("../../img/time.svg");
+}
+
+.advantages__wrap--comfortable::before {
+  background-image: url("../../img/pocket.svg");
+}
+
+.advantages__wrap--fresh::before {
+  background-image: url("../../img/light.svg");
+}
+
+.advantages__wrap--eco::before {
+  background-image: url("../../img/leaf.svg");
+}

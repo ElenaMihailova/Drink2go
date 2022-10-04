@@ -1,0 +1,112 @@
+.filter {
+  @media (min-width: @vTabletWidth) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  @media (min-width: @vTabletWidth) {
+    gap: 0;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    width: 318px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.filter__item {
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 23px;
+
+  @media (min-width: @vTabletWidth) {
+    margin-top: 0;
+    min-width: 32%;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.filter__button {
+  .button;
+  font-size: 13px;
+  line-height: 1.85;
+  width: 160px;
+  padding: 10px 14px;
+
+  @media (min-width: @vTabletWidth) {
+    font-size: 14px;
+    line-height: 1.71;
+    width: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}
+
+.filter__button--del {
+  background-color: @colorBaseWhite;
+  color: @colorBasePrimary;
+  line-height: 1.71;
+  font-size: 14px;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:disabled {
+    color: @colorBaseWhite;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+}
+
+.filter__button-wrapper {
+  padding: 8px 40px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 26px;
+  align-items: center;
+
+  @media (min-width: @vTabletWidth) {
+    flex-direction: row;
+    gap: 30px;
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 180px;
+    padding-right: 180px;
+    padding-top: 18px;
+    padding-bottom: 42px;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    padding: 0;
+    margin-top: 10px;
+    gap: 18px;
+  }
+}
+
+.filter__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.filter__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
